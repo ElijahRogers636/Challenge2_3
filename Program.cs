@@ -19,7 +19,7 @@ namespace Challenge2_3
 
             
             CreateTriangleWhileFor(numChoice, triWidth);
-            CreateTriangleNestedFor(numChoice, triWidth);
+            CreateReversedTriangleNestedFor(numChoice, triWidth);
             
 
         }
@@ -36,22 +36,19 @@ namespace Challenge2_3
                 }
                 Console.WriteLine();
                 count--;
+
             }
         }
 
-        //Create a triangle of n width out of chosen number with a nested forloop
-        static void CreateTriangleNestedFor(string num, int width)
+        //Create a "Reversed" triangle of n width out of chosen number with a nested forloop
+        static void CreateReversedTriangleNestedFor(string num, int width)
         {
-            int count = width;
             for (int i = 0; i <= width; i++)
             {
-                
-                for(int j = 0; j < count; j++)
+                for(int j = 0; j < i; j++)
                 {
                     Console.Write(num);
                 }
-
-                count--;
                 Console.WriteLine();
             }
         }
